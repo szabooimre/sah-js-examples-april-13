@@ -17,3 +17,42 @@ $('#add-button').click(()=>{
 $('#remove-button').click(()=>{
     $('li:last-child').remove()
 })
+
+let printNumbersTill = (number) => {
+    for(i=1;i<=number;i++) {
+        $('ul').append('<li>' + i + '</li>')
+    }
+}
+
+printNumbersTill(20)
+printNumbersTill(15)
+
+let getGreetingTo = (name) => {
+    return 'Greeting to ' + name + "!"
+}
+
+console.log(getGreetingTo('Mark'))
+$('ul').append('<li>' + getGreetingTo('Mark') + '</li>')
+
+let printValues = (array) => {
+    for(i=0;i<array.length;i++) {
+        console.log(array[i])
+    }
+}
+
+printValues([6, 3, 1, 4, 0, 67])
+
+let myNumbers = [6, 3, 1, 4, 0, 67]
+myNumbers.forEach(
+    (number) => {
+        console.log(number)
+    }
+)
+
+let printValuesReloaded = (array) => {
+    array.forEach((item) => {
+        console.log(item)
+    })
+}
+
+printValuesReloaded([67,0,4,1,3,6])
